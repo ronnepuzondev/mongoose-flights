@@ -1,5 +1,5 @@
-<%- include('../partials/header') %>
-
+<%- include('../partials/header') %> <% let oneYearFromNow = new Date(new
+Date().setFullYear(new Date().getFullYear()+1)) %>
 
 <h2>Enter a New Flight</h2>
 <form id="new-form" action="/flights" method="POST">
@@ -18,9 +18,9 @@
     <option value="SAN">SAN</option>
   </select>
   <label>Flight No:</label>
-  <input type="text" name="flightNo" />
-  <!-- <label>Departs:</label>
-  <label>currentDate</Date></label> -->
+  <input type="text" name="flightNo" placeholder="10-9999" />
+  <label>Departs:</label>
+  <%- oneYearFromNow %>
   <input type="submit" value="Add Flight" />
 </form>
 
