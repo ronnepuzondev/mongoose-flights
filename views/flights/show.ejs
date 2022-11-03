@@ -44,7 +44,7 @@
     <% flight.destinations.forEach(function(d) { %>
     <tr>
       <td><%= d.airport%></td>
-      <td><%= d.arrival.new Date(new Date().setFullYear(new Date().getFullYear()+1))%></td>
+      <td><%= d.arrival%></td>
     </tr>
     <% }); %>
   </tbody>
