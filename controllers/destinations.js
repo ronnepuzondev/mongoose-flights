@@ -1,5 +1,7 @@
 var Flight = require('../models/flight');
 
+let today = new Date();
+
 module.exports = {
   create
 };
