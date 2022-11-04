@@ -10,8 +10,10 @@
   <div>Departure Date:</div>
   <div><%= flight.departs %></div>
   <div><a href="/flights/<%= flight._id %>/tickets/new">ADD NEW TICKET TO FLIGHT</a></div>
+  <div class="tickets"></div>
   <% if (tickets.length) { %>
     <table>
+      
       <thead>
         <tr><br></br>
           Tickets:
@@ -31,6 +33,7 @@
     <% } else { %>
       <h5>No Tickets Yet</h5>
     <% } %>
+  </div>
 
 </section>
 

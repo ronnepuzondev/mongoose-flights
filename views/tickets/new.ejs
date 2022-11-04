@@ -1,12 +1,25 @@
-
-<form id="add-per-to-cast" action="/flights/<%= flight._id %>/tickets" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a Ticket</title>
+  <link rel='stylesheet' href='public/stylesheets/style.css' />
+</head>
+<body>
+  <div class="newTicketForm">
+<form id="add-ticket" action="/flights/<%= flight._id %>/tickets" method="POST">
   <label>Seat:</label>
-  <input type="text" name="seat">
+  <input type="text" name="seat" required pattern="[A-F][1-9]" placeholder="[A-F][1-9]">
   <label>Price:</label>
   <input type="number" name="price">
   <label>Flight No:</label>
   <input type="text" name="flight" value="<%= flight.id %>">
   <input type="submit" value="Add Ticket">
-  
+
 </form>
+</div>
+</body>
+</html>
 
