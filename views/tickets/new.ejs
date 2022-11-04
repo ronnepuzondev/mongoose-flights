@@ -11,7 +11,7 @@
   <div class="newTicketForm">
 <form id="add-ticket" action="/flights/<%= flight._id %>/tickets" method="POST">
   <label>Seat:</label>
-  <input type="text" name="seat" required pattern="[A-F][1-9]" placeholder="[A-F][1-9]">
+  <input type="text" name="seat" required pattern="[A-F][1-9]\d?" placeholder="[A-F][1-9]">
   <label>Price:</label>
   <input type="number" name="price">
   <label>Flight No:</label>
