@@ -9,7 +9,32 @@
   <div><%= flight.flightNo %></div>
   <div>Departure Date:</div>
   <div><%= flight.departs %></div>
+  <div><a href="/flights/<%= flight._id %>/tickets/new">ADD NEW TICKET TO FLIGHT</a></div>
+  <% if (tickets.length) { %>
+    <table>
+      <thead>
+        <tr><br></br>
+          Tickets:
+          <th>Seat</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% tickets.forEach(function(d) { %>
+        <tr>
+          <td><%= d.seat%></td>
+          <td><%= d.price%></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+      <h5>No Tickets Yet</h5>
+    <% } %>
+
 </section>
+
+
 
 <br /><br />
 <h2>Destinations</h2>
@@ -18,8 +43,10 @@
   method="POST"
   action="/flights/<%= flight._id %>/destinations"
 >
-  <label>Airport:</label>
-  <!-- <input type="text" name="airport"> -->
+
+
+
+<label>Airport:</label>
   <select name="airport">
     <option value="AUS">AUS</option>
     <option value="DFW">DFW</option>

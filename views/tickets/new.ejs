@@ -1,0 +1,12 @@
+
+<form id="add-per-to-cast" action="/flights/<%= flight._id %>/tickets" method="POST">
+  <label>Seat:</label>
+  <input type="text" name="seat">
+  <label>Price:</label>
+  <input type="number" name="price">
+  <label>Flight No:</label>
+  <input type="text" name="flight" value="<%= flight.id %>">
+  <input type="submit" value="Add Ticket">
+  
+</form>
+
